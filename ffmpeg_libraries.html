@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>FFmpeg libraries</title>
+	<div class="main-container">
+	<link rel="stylesheet" href="ffmpeg_libraries.css">
+</head>
+<body>
+<a href="https://ffmpeg.org/" target="_blank">＜FFmpeg公式＞</a><br><br>
+<table>
+	<tbody>
+		<tr>
+			<td style="background-color: #f6ffe0; text-align: center; vertical-align: middle; font-weight: bold;">FFmpegソースコード</td>
+			<td><a href="https://github.com/ffmpeg/ffmpeg" target="_blank">https://github.com/ffmpeg/ffmpeg</a></td>
+			<td><a href="https://code.ffmpeg.org/FFmpeg/FFmpeg" target="_blank">https://code.ffmpeg.org/FFmpeg/FFmpeg</a></td>
+			<td><a href="https://git.ffmpeg.org/ffmpeg.git" target="_blank">https://git.ffmpeg.org/ffmpeg.git</a></td>
+		</tr>
+	</tbody>
+</table>
+
+＜映像系＞<br>
+<table>
+	<tbody>
+		<tr>
+			<th>ライブラリー</th>
+			<th>URL</th>
+			<th>備考１</th>
+			<th>備考２</th>
+		</tr>
+		<tr>
+			<td>x264</td>
+			<td><a href="https://code.videolan.org/videolan/x264" target="_blank">https://code.videolan.org/videolan/x264</a></td>
+			<td>H.264 encoder</td>
+			<td><a href="https://www.videolan.org/developers/x264.html" target="_blank">x264公式</a></td>
+		</tr>
+		<tr>
+			<td>x265</td>
+			<td><a href="https://github.com/Multicorewareinc/x265" target="_blank">https://github.com/Multicorewareinc/x265</a></td>
+			<td>Open Source H.265 / HEVC video encoder</td>
+			<td><a href="https://www.x265.org/" target="_blank">x265公式</a></td>
+		</tr>
+		<tr>
+			<td>SVT-AV1</td>
+			<td><a href="https://gitlab.com/AOMediaCodec/SVT-AV1" target="_blank">https://gitlab.com/AOMediaCodec/SVT-AV1</a></td>
+			<td>Scalable Video Technology for AV1 (SVT-AV1 Encoder)</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>aom</td>
+			<td><a href="https://aomedia.googlesource.com/aom" target="_blank">https://aomedia.googlesource.com/aom</a></td>
+			<td>Alliance for Open Media</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>rav1e</td>
+			<td><a href="https://github.com/xiph/rav1e" target="_blank">https://github.com/xiph/rav1e</a></td>
+			<td>AV1 video encoder</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>dav1d</td>
+			<td><a href="https://code.videolan.org/videolan/dav1d" target="_blank">https://code.videolan.org/videolan/dav1d</a></td>
+			<td>AV1 cross-platform decoder</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>VVenC</td>
+			<td><a href="https://github.com/fraunhoferhhi/vvenc" target="_blank">https://github.com/fraunhoferhhi/vvenc</a></td>
+			<td>H.266/VVC, the Fraunhofer Versatile Video Encoder</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>libvpx</td>
+			<td><a href="https://chromium.googlesource.com/webm/libvpx" target="_blank">https://chromium.googlesource.com/webm/libvpx</a></td>
+			<td>WebM VP8/VP9 Codec</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>OpenAPV</td>
+			<td><a href="https://github.com/AcademySoftwareFoundation/openapv" target="_blank">https://github.com/AcademySoftwareFoundation/openapv</a></td>
+			<td>Open Advanced Professional Video Codec</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>SVT-JPEG-XS</td>
+			<td><a href="https://github.com/OpenVisualCloud/SVT-JPEG-XS" target="_blank">https://github.com/OpenVisualCloud/SVT-JPEG-XS</a></td>
+			<td>Intel® JPEG-XS Library</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>VMAF</td>
+			<td><a href="https://github.com/Netflix/vmaf" target="_blank">https://github.com/Netflix/vmaf</a></td>
+			<!-- 3個目と4個目のセルを横に2つ分結合 -->
+			<td colspan="2">Video Multi-Method Assessment Fusion<br><span style="font-style: italic;">ffmpeg -hide_banner -i 圧縮後.mp4 -i 元動画.mp4 -filter_complex "libvmaf=n_threads=16" -f null -</span></td>
+		</tr>
+	</tbody>
+</table>
+＜音声系＞<br>
+<table>
+	<tbody>
+		<tr>
+			<th>ライブラリー</th>
+			<th>URL</th>
+			<th>備考１</th>
+			<th>備考２</th>
+		</tr>
+		<tr>
+			<td>fdk-aac</td>
+			<td><a href="https://github.com/mstorsjo/fdk-aac" target="_blank">https://github.com/mstorsjo/fdk-aac</a></td>
+			<td>Fraunhofer FDK AAC</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>opus</td>
+			<td><a href="https://github.com/xiph/opus" target="_blank">https://github.com/xiph/opus</a></td>
+			<td></td>
+			<td><a href="https://opus-codec.org/" target="_blank">Opus Codec</a></td>
+		</tr>
+		<tr>
+			<td>ogg</td>
+			<td><a href="https://github.com/xiph/ogg" target="_blank">https://github.com/xiph/ogg</a></td>
+			<td></td>
+			<td>vorbisに必要</td>
+		</tr>
+		<tr>
+			<td>vorbis</td>
+			<td><a href="https://github.com/xiph/vorbis" target="_blank">https://github.com/xiph/vorbis</a></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>lame</td>
+			<td><a href="https://github.com/lameproject/lame" target="_blank">https://github.com/lameproject/lame</a></td>
+			<td>MPEG Audio Layer III (MP3) encoder</td>
+			<td><a href="https://lame.sourceforge.io/" target="_blank">LAME MP3 Encoder</a></td>
+		</tr>
+		<tr>
+			<td>TwoLAME</td>
+			<td><a href="https://github.com/njh/twolame" target="_blank">https://github.com/njh/twolame</a></td>
+			<td>MPEG Audio Layer 2 (MP2) encoder</td>
+			<td><a href="https://www.twolame.org/" target="_blank">MPEG Audio Layer 2 Encoder</a></td>
+		</tr>
+		<tr>
+			<td>soxr</td>
+			<td><a href="https://github.com/chirlu/soxr" target="_blank">https://github.com/chirlu/soxr</a></td>
+			<td>音声データのサンプリングレートをリサンプリング</td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
+＜画像系＞<br>
+<table>
+	<tbody>
+		<tr>
+			<th>ライブラリー</th>
+			<th>URL</th>
+			<th>備考１</th>
+			<th>備考２</th>
+		</tr>
+		<tr>
+			<td>openjpeg</td>
+			<td><a href="https://github.com/uclouvain/openjpeg" target="_blank">https://github.com/uclouvain/openjpeg</a></td>
+			<td>JPEG 2000</td>
+			<td><a href="https://www.openjpeg.org/" target="_blank">OpenJPEG</a></td>
+		</tr>
+		<tr>
+			<td>libjxl</td>
+			<td><a href="https://github.com/libjxl/libjxl" target="_blank">https://github.com/libjxl/libjxl</a></td>
+			<td>JPEG XL</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>WebP</td>
+			<td><a href="https://chromium.googlesource.com/webm/libwebp" target="_blank">https://chromium.googlesource.com/webm/libwebp</a></td>
+			<td></td>
+			<td><a href="https://developers.google.com/speed/webp" target="_blank">WebP</a></td>
+		</tr>
+		<tr>
+			<td>png</td>
+			<td><a href="https://github.com/pnggroup/libpng/tree/libpng16" target="_blank">https://github.com/pnggroup/libpng/tree/libpng16</a></td>
+			<td><span style="font-style: italic;">git clone -b libpng16 --depth 1 https://github.com/pnggroup/libpng.git</span></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>cairo</td>
+			<td><a href="https://gitlab.freedesktop.org/cairo/cairo" target="_blank">https://gitlab.freedesktop.org/cairo/cairo</a></td>
+			<td></td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
+＜GPU支援＞<br>
+<table>
+	<tbody>
+		<tr>
+			<th>ライブラリー</th>
+			<th>URL</th>
+			<th>備考１</th>
+			<th>備考２</th>
+		</tr>
+		<tr>
+			<td>AMF</td>
+			<td><a href="https://github.com/GPUOpen-LibrariesAndSDKs/AMF" target="_blank">https://github.com/GPUOpen-LibrariesAndSDKs/AMF</a></td>
+			<td>Advanced Media Framework (AMF) SDK</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>ffnvcodec</td>
+			<td><a href="https://github.com/FFmpeg/nv-codec-headers" target="_blank">https://github.com/FFmpeg/nv-codec-headers</a></td>
+			<td>cuda</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>libvpl (qsv)</td>
+			<td><a href="https://github.com/intel/libvpl" target="_blank">https://github.com/intel/libvpl</a></td>
+			<td>Intelの映像処理技術 oneVPL(Video Processing Library) を利用するためのライブラリー</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>OpenCL-Headers</td>
+			<td><a href="https://github.com/KhronosGroup/OpenCL-Headers" target="_blank">https://github.com/KhronosGroup/OpenCL-Headers</a></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>OpenCL-ICD-Loader</td>
+			<td><a href="https://github.com/KhronosGroup/OpenCL-ICD-Loader" target="_blank">https://github.com/KhronosGroup/OpenCL-ICD-Loader</a></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>Vulkan-Headers</td>
+			<td><a href="https://github.com/KhronosGroup/Vulkan-Headers" target="_blank">https://github.com/KhronosGroup/Vulkan-Headers</a></td>
+			<td>Vulkan header files and API registry</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>Vulkan-Loader</td>
+			<td><a href="https://github.com/KhronosGroup/Vulkan-Loader" target="_blank">https://github.com/KhronosGroup/Vulkan-Loader</a></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>mediafoundation</td>
+			<td>ソースコードのダウンロードや事前ビルドは不要</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>vaapi</td>
+			<td colspan="2"><span style="font-style: italic;">pacman -S --overwrite '/ucrt64/include/va/*' --overwrite '/ucrt64/lib/pkgconfig/libva.pc' mingw-w64-ucrt-x86_64-libva</span><br>configureに--enable-vaapi、--extra-ldflagsに-staticを入れてビルド</td>
+			<td>VA-API (Video Acceleration API)</td>
+		</tr>
+	</tbody>
+</table>
+<table>
+	<tbody>
+		<tr>
+			<th>ライブラリー</th>
+			<th>URL</th>
+			<th>備考１</th>
+			<th>備考２</th>
+		</tr>
+		<tr>
+			<td>libzimg</td>
+			<td><a href="https://github.com/sekrit-twc/zimg" target="_blank">https://github.com/sekrit-twc/zimg</a></td>
+			<td>高品質な映像のリサイズや色空間変換を行う</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>Little-CMS</td>
+			<td><a href="https://github.com/mm2/Little-CMS" target="_blank">https://github.com/mm2/Little-CMS</a></td>
+			<td>ICCプロファイルを利用した色管理を行う</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>lzma</td>
+			<td>curl -LO <a href="https://github.com/tukaani-project/xz/releases/download/v5.8.3/xz-5.8.3.tar.xz" target="_blank">https://github.com/tukaani-project/xz/releases/download/v5.8.3/xz-5.8.3.tar.xz</a></td>
+			<td>LZMA圧縮・展開を利用するための機能</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>zlib</td>
+			<td><a href="https://github.com/madler/zlib" target="_blank">https://github.com/madler/zlib</a></td>
+			<td>DEFLATE方式による圧縮・展開 ZIP形式などに使われる圧縮技術</td>
+			<td>cairo・libblurayに必要</td>
+		</tr>
+		<tr>
+			<td>libplacebo</td>
+			<td><a href="https://github.com/haasn/libplacebo" target="_blank">https://github.com/haasn/libplacebo</a></td>
+			<td>GPUを活用した高品質なスケーリング、色空間変換、HDRトーンマッピング</td>
+			<td><a href="https://libplacebo.org/" target="_blank">Introduction - libplacebo</a></td>
+		</tr>
+		<tr>
+			<td>AviSynthPlus</td>
+			<td><a href="https://github.com/AviSynth/AviSynthPlus" target="_blank">https://github.com/AviSynth/AviSynthPlus</a></td>
+			<td></td>
+			<td><a href="https://avs-plus.net/" target="_blank">AviSynth+</a></td>
+		</tr>
+		<tr>
+			<td>vapoursynth</td>
+			<td><a href="https://github.com/vapoursynth/vapoursynth" target="_blank">https://github.com/vapoursynth/vapoursynth</a></td>
+			<td></td>
+			<td><a href="https://www.vapoursynth.com/" target="_blank">VapourSynth</a></td>
+		</tr>
+	</tbody>
+</table>
+＜字幕系＞<br>
+<table>
+	<tbody>
+		<tr>
+			<th>ライブラリー</th>
+			<th>URL</th>
+			<th>備考１</th>
+			<th>備考２</th>
+		</tr>
+		<tr>
+			<td>libfribidi</td>
+			<td><a href="https://github.com/fribidi/fribidi" target="_blank">https://github.com/fribidi/fribidi</a></td>
+			<td>右から左に書く言語(RTL言語)の字幕や<br>テキストを動画内に正しくレンダリング(双方向テキスト処理)</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>FreeType</td>
+			<td><a href="https://gitlab.freedesktop.org/freetype/freetype" target="_blank">https://gitlab.freedesktop.org/freetype/freetype</a></td>
+			<td></td>
+			<td>libblurayに必要</td>
+		</tr>
+		<tr>
+			<td>HarfBuzz</td>
+			<td><a href="https://github.com/harfbuzz/harfbuzz" target="_blank">https://github.com/harfbuzz/harfbuzz</a></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>libass</td>
+			<td><a href="https://github.com/libass/libass" target="_blank">https://github.com/libass/libass</a></td>
+			<td>ASS/SSA (Advanced Substation Alpha/Substation Alpha) に対応した字幕レンダラー</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>libaribcaption</td>
+			<td><a href="https://github.com/xqq/libaribcaption" target="_blank">https://github.com/xqq/libaribcaption</a></td>
+			<td>テレビ放送の ARIB STD-B24 字幕をデコード、レンダリングするライブラリ</td>
+			<td><a href="https://github.com/xqq/libaribcaption/blob/master/README_ja.md" target="_blank">README_ja.md</a></td>
+		</tr>
+		<tr>
+			<td>Fontconfig</td>
+			<td><a href="https://gitlab.freedesktop.org/fontconfig/fontconfig" target="_blank">https://gitlab.freedesktop.org/fontconfig/fontconfig</a></td>
+			<td>Font configuration and customization library</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>iconv</td>
+			<td><a href="https://ftp.gnu.org/pub/gnu/libiconv/" target="_blank">https://ftp.gnu.org/pub/gnu/libiconv/</a></td>
+			<td>curl -LO <a href="https://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.19.tar.gz" target="_blank">https://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.19.tar.gz</a></td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
+＜通信系＞<br>
+<table>
+	<tbody>
+		<tr>
+			<th>ライブラリー</th>
+			<th>URL</th>
+			<th>備考１</th>
+			<th>備考２</th>
+		</tr>
+		<tr>
+			<td>GnuTLS</td>
+			<td><a href="https://gitlab.com/gnutls/gnutls/-/tags" target="_blank">https://gitlab.com/gnutls/gnutls/-/tags</a></td>
+			<td>公式リリース tarball版 (bootstrap を避けるため)</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>OpenSSL</td>
+			<td><a href="https://github.com/openssl/openssl" target="_blank">https://github.com/openssl/openssl</a></td>
+			<td>libsrt ビルドに必要</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>libsrt</td>
+			<td><a href="https://github.com/Haivision/srt" target="_blank">https://github.com/Haivision/srt</a></td>
+			<td>FFmpegビルド、make前に <span style="font-style: italic;">sed -i 's/-lgcc_s/-lgcc/g' ffbuild/config.mak</span></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>libssh</td>
+			<td>curl -LO <a href="https://www.libssh.org/files/0.12/libssh-0.12.0.tar.xz" target="_blank">https://www.libssh.org/files/0.12/libssh-0.12.0.tar.xz</a></td>
+			<td>最新版は不具合有</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>librist</td>
+			<td><a href="https://code.videolan.org/rist/librist" target="_blank">https://code.videolan.org/rist/librist</a></td>
+			<td></td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
+＜ディスク系＞<br>
+<table>
+	<tbody>
+		<tr>
+			<th>ライブラリー</th>
+			<th>URL</th>
+			<th>備考１</th>
+			<th>備考２</th>
+		</tr>
+		<tr>
+			<td>libcdio</td>
+			<td><a href="https://github.com/libcdio/libcdio-C" target="_blank">https://github.com/libcdio/libcdio-C</a></td>
+			<td>Compact Disc (CD) Input and Control Core Library</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>libcdio-paranoia</td>
+			<td><a href="https://github.com/libcdio/libcdio-paranoia" target="_blank">https://github.com/libcdio/libcdio-paranoia</a></td>
+			<td>CD paranoia on top of libcdio</td>
+			<td>libcdioに必要</td>
+		</tr>
+		<tr>
+			<td>libdvdcss</td>
+			<td><a href="https://code.videolan.org/videolan/libdvdcss" target="_blank">https://code.videolan.org/videolan/libdvdcss</a></td>
+			<td>libDVDcss, decryption of all DVDs</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>libdvdread</td>
+			<td><a href="https://code.videolan.org/videolan/libdvdread" target="_blank">https://code.videolan.org/videolan/libdvdread</a></td>
+			<td>Library to read DVD disks</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>libdvdnav</td>
+			<td><a href="https://code.videolan.org/videolan/libdvdnav" target="_blank">https://code.videolan.org/videolan/libdvdnav</a></td>
+			<td>Library to navigate DVD disks</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>libxml2</td>
+			<td><a href="https://github.com/GNOME/libxml2" target="_blank">https://github.com/GNOME/libxml2</a></td>
+			<td>XMLおよびHTMLの読み込み、修正、書き込み</td>
+			<td>libblurayに必要</td>
+		</tr>
+		<tr>
+			<td>libbluray</td>
+			<td><a href="https://code.videolan.org/videolan/libbluray" target="_blank">https://code.videolan.org/videolan/libbluray</a></td>
+			<td>Library to access Blu-Ray disks</td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
+＜その他＞<br>
+<table>
+	<tbody>
+		<tr>
+			<th>ライブラリー</th>
+			<th>URL</th>
+			<th>備考１</th>
+			<th>備考２</th>
+		</tr>
+		<tr>
+			<td>SDL2</td>
+			<td><a href="https://github.com/libsdl-org/SDL/tree/SDL2" target="_blank">https://github.com/libsdl-org/SDL/tree/SDL2</a></td>
+			<td><span style="font-style: italic;">git clone -b SDL2 --depth 1 https://github.com/libsdl-org/SDL.git</span></td>
+			<td>ffplayに必要</td>
+		</tr>
+		<tr>
+			<td>SPIRV-Headers</td>
+			<td><a href="https://github.com/KhronosGroup/SPIRV-Headers" target="_blank">https://github.com/KhronosGroup/SPIRV-Headers</a></td>
+			<td></td>
+			<td>libplaceboのため必要</td>
+		</tr>
+		<tr>
+			<td>libshaderc</td>
+			<td><a href="https://github.com/google/shaderc" target="_blank">https://github.com/google/shaderc</a></td>
+			<td rowspan="2">shadercかglslangのどちらかを用意(両方は不要)</td>
+
+			<td>libplaceboのため必要</td>
+		</tr>
+		<tr>
+			<td>glslang</td>
+			<td><a href="https://github.com/KhronosGroup/glslang" target="_blank">https://github.com/KhronosGroup/glslang</a></td>
+			<td>libplaceboのため必要</td>
+		</tr>
+		<tr>
+			<td>pixman</td>
+			<td><a href="https://gitlab.freedesktop.org/pixman/pixman" target="_blank">https://gitlab.freedesktop.org/pixman/pixman</a></td>
+			<td></td>
+			<td>cairoに必要</td>
+		</tr>
+		<tr>
+			<td>glib</td>
+			<td><a href="https://github.com/GNOME/glib" target="_blank">https://github.com/GNOME/glib</a></td>
+			<td></td>
+			<td>cairoに必要</td>
+		</tr>
+		<tr>
+			<td>gmp</td>
+			<td><a href="https://gmplib.org/download/gmp/" target="_blank">https://gmplib.org/download/gmp/</a></td>
+			<td>curl -LO <a href="https://gmplib.org/download/gmp/gmp-6.3.0.tar.xz" target="_blank">https://gmplib.org/download/gmp/gmp-6.3.0.tar.xz</a></td>
+			<td>gnutlsに必要</td>
+		</tr>
+		<tr>
+			<td>nettle</td>
+			<td><a href="https://ftp.gnu.org/gnu/nettle/" target="_blank">https://ftp.gnu.org/gnu/nettle/</a></td>
+			<td>curl -LO <a href="https://ftp.gnu.org/gnu/nettle/nettle-4.0.tar.gz" target="_blank">https://ftp.gnu.org/gnu/nettle/nettle-4.0.tar.gz</a></td>
+			<td>gnutlsに必要</td>
+		</tr>
+		<tr>
+			<td>libpng</td>
+			<td>curl -LO <a href="https://sourceforge.net/projects/libpng/files/libpng16/1.6.58/libpng-1.6.58.tar.xz" target="_blank">https://sourceforge.net/projects/libpng/files/libpng16/1.6.58/libpng-1.6.58.tar.xz</a></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>bzlib</td>
+			<td>curl -LO <a href="https://sourceware.org/pub/bzip2/bzip2-1.0.8.tar.gz" target="_blank">https://sourceware.org/pub/bzip2/bzip2-1.0.8.tar.gz</a></td>
+			<td></td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
+<table>
+	<tbody>
+		<tr>
+			<th>PR(プルリクエスト)</th>
+			<th>URL</th>
+			<th>備考１</th>
+			<th>備考２</th>
+		</tr>
+		<tr>
+			<td>OpenAPV</td>
+			<td><a href="https://code.ffmpeg.org/FFmpeg/FFmpeg/pulls/24499" target="_blank">https://code.ffmpeg.org/FFmpeg/FFmpeg/pulls/24499</a></td>
+			<td>Support APV RAW encoding and decoding</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>MMT/TLV</td>
+			<td><a href="https://code.ffmpeg.org/FFmpeg/FFmpeg/pulls/21037" target="_blank">https://code.ffmpeg.org/FFmpeg/FFmpeg/pulls/21037</a></td>
+			<td>add MMTP parser and MMT/TLV demuxer</td>
+			<td><a href="https://github.com/superfashi/FFmpeg" target="_blank">github.com/superfashi</a><br><a href="https://code.ffmpeg.org/SuperFashi/FFmpeg" target="_blank">code.ffmpeg.org/SuperFashi</a></td>
+		</tr>
+	</tbody>
+</table>
+	<!-- フッターを </div> の「内側」に移動します -->
+	<footer>
+		<p class="footer-copy">Beyond the Horizon.</p>
+		<small class="footer-copyright">&copy; 2026 Atoll</small>
+	</footer>
+</div>
+</body>
+</html>

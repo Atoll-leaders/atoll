@@ -1,0 +1,121 @@
+/* ==========================================================================
+   0. ブラウザの初期余白の消去と、画面全体の高さを確保する設定
+   ========================================================================== */
+html, body {
+	margin: 0 !important;
+	padding: 0 !important;
+	height: 100%;
+}
+
+/* ==========================================================================
+   1. ページ全体を包む枠の設定（1つに綺麗に統合しました）
+   ========================================================================== */
+.main-container {
+	width: 100%;
+	min-height: 100vh;                  /* 画面の縦幅いっぱいに背景を広げる設定 */
+	overflow-x: auto !important;        /* 画面幅からはみ出したらここにスクロールバーを1つだけ出す */
+	-webkit-overflow-scrolling: touch; 
+
+	/* 背景は端まで広げたまま、テーブル（本文）の上下左右に約5mmの余白を作る */
+	padding: 15px !important;           
+	box-sizing: border-box !important;  /* 余白を入れても全体の幅が崩れないようにするお守り */
+	
+	/* 背景画像の設定 */
+	background-image: url("images/p0435_s.jpg") !important; 
+	background-repeat: no-repeat !important;               /* 画像の繰り返しを防ぐ */
+	background-size: cover !important;                     /* 枠全体を覆うように調整 */
+	background-position: center !important;                 /* 画像を中央に配置 */
+}
+
+/* ==========================================================================
+   2. テーブル本体の設定（画面幅いっぱいに広げて右側の大きな余白を消去）
+   ========================================================================== */
+table {
+	display: table !important;          
+	width: 100% !important;             /* 画面の右端までぴったり広げて余白を消します */
+	min-width: 1200px !important;       /* 最低でも1200pxの幅を保証し、文字が絶対に潰れないようにします */
+	max-width: none !important;
+	table-layout: fixed !important;     /* 列の幅を完全に固定するモード */
+	margin-bottom: 25px;                /* テーブル下の余白 */
+	
+	/* 枠線を綺麗に1本にする設定 */
+	border-spacing: 0 !important;
+	border-top: 1px solid #595959 !important;
+	border-left: 1px solid #595959 !important;
+	
+	/* テーブル自体も透明にして背景を透けさせる */
+	background: transparent !important;
+}
+
+/* ==========================================================================
+   3. 各列の横幅をパーセントで強制固定（合計：100%）
+   ========================================================================== */
+table th:nth-child(1), table td:nth-child(1) { width: 12% !important; } /* ライブラリー列 */
+table th:nth-child(2), table td:nth-child(2) { width: 38% !important; } /* URL列 */
+table th:nth-child(3), table td:nth-child(3) { width: 35% !important; } /* 備考１列 */
+table th:nth-child(4), table td:nth-child(4) { width: 15% !important; } /* 備考２列 */
+
+/* ==========================================================================
+   4. 枠線と余白の設定
+   ========================================================================== */
+table th, table td {
+	border-right: 1px solid #595959 !important;
+	border-bottom: 1px solid #595959 !important;
+}
+
+/* ==========================================================================
+   5. セルの設定：普段は改行を禁止し、長すぎる文字は非表示にする
+   ========================================================================== */
+td, th {
+	padding: 3px;
+	height: 25px;
+	overflow: hidden !important;        /* 普段は枠からはみ出た文字を隠します */
+	text-overflow: ellipsis !important; /* 文字が切れている場所に自動で「...」を表示してスマートに見せます */
+	white-space: nowrap !important;     /* 絶対に改行させない */
+	word-break: keep-all !important;
+}
+
+/* セルの中にあるリンクやタグの基本設定 */
+td *, th * {
+	display: inline-block !important; 
+	max-width: 100%;                    
+	white-space: nowrap !important;  
+	word-break: keep-all !important;
+	vertical-align: middle;
+}
+
+/* ==========================================================================
+   6. 背景色とストライプの設定
+   ========================================================================== */
+th {
+	background: rgba(240, 230, 204, 0.8) !important; /* 元の色を不透明度80%の半透明に */
+}
+.even {
+	background: rgba(251, 248, 240, 0.7) !important; /* 元の色を不透明度70%の半透明に */
+}
+.odd {
+	background: rgba(254, 252, 249, 0.7) !important; /* 元の色を不透明度70%の半透明に */
+}
+
+/* ==========================================================================
+   7. フッター（最下部文字列）の設定
+   ========================================================================== */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: transparent !important; /* 完全透明に強制指定 */
+    color: #333333; /* 文字色（壁紙が白っぽい場合は #333333 など暗い色に変更してください） */
+}
+
+.footer-copy {
+    font-size: 1.1rem;
+    font-style: italic; 
+    letter-spacing: 0.05em;
+    margin-bottom: 12px;
+}
+
+.footer-copyright {
+    display: block;
+    font-size: 0.8rem;
+    color: #888888;
+}
