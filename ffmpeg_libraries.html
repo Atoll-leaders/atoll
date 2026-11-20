@@ -5,6 +5,46 @@
 	<title>FFmpeg libraries</title>
 	<div class="main-container">
 	<link rel="stylesheet" href="ffmpeg_libraries.css">
+  <style>
+.container {
+  height: 1500px;
+  padding: 50px 0;
+}
+
+p {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+
+button {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 20px;
+  bottom: 20px;
+  width: 60px;
+  height: 60px;
+  font-size: 16px;
+  padding-top: 6px;
+  font-weight: bold;
+  color: #333;
+  background: #FFF;
+  border: 1px solid #333;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: .2s;
+  box-shadow: 3px 3px 0px 0px #333;
+  letter-spacing: 1px;
+}
+
+.is-active {
+  opacity: 1;
+  visibility: visible;
+}
+  </style>
 </head>
 <body>
 <a href="https://ffmpeg.org/" target="_blank">＜FFmpeg公式＞</a><br><br>
@@ -331,7 +371,7 @@
 		<tr>
 			<td>AviSynthPlus</td>
 			<td><a href="https://github.com/AviSynth/AviSynthPlus" target="_blank">https://github.com/AviSynth/AviSynthPlus</a></td>
-			<td></td>
+			<td>AviSynth.dll は Visual Studio 2026でビルド</td>
 			<td><a href="https://avs-plus.net/" target="_blank">AviSynth+</a></td>
 		</tr>
 		<tr>
@@ -563,6 +603,36 @@
 			<td>AviUtlで使用、多重化 (Mux)： 映像や音声、字幕ストリームの合成</td>
 			<td><a href="https://gpac.io/" target="_blank">GPAC公式</a></td>
 		</tr>
+		<tr>
+			<td>mpv.exe</td>
+			<td><a href="https://github.com/mpv-player/mpv" target="_blank">https://github.com/mpv-player/mpv</a></td>
+			<td></td>
+			<td><a href="https://mpv.io/" target="_blank">mpv公式</a></td>
+		</tr>
+		<tr>
+			<td>LuaJIT</td>
+			<td><a href="https://github.com/LuaJIT/LuaJIT" target="_blank">https://github.com/LuaJIT/LuaJIT</a></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>Vulkan-Shim-Loader</td>
+			<td><a href="https://github.com/BtbN/Vulkan-Shim-Loader" target="_blank">https://github.com/BtbN/Vulkan-Shim-Loader</a></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>LAV Filters</td>
+			<td><a href="https://github.com/Nevcairiel/LAVFilters" target="_blank">https://github.com/Nevcairiel/LAVFilters</a></td>
+			<td>Visual Studio 2022でビルド</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
 	</tbody>
 </table>
 <table>
@@ -593,5 +663,24 @@
 		<small class="footer-copyright">&copy; 2026 Atoll</small>
 	</footer>
 </div>
+<button class="page-top">TOP</button>
+  <script>
+const button = document.querySelector('.page-top');
+
+button.addEventListener('click', () => {
+  window.scroll({ 
+    top: 0, 
+    behavior: "smooth"
+  });
+});
+
+window.addEventListener('scroll', () => {
+  if(window.scrollY > 100){
+    button.classList.add('is-active');
+  }else{
+    button.classList.remove('is-active');
+  }
+});
+  </script>
 </body>
 </html>
